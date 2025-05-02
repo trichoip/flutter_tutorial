@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: RichText(
-          text: TextSpan(
+          text: const TextSpan(
             text: 'Xin chào ',
             style: TextStyle(color: Colors.black, fontSize: 30),
             children: <InlineSpan>[

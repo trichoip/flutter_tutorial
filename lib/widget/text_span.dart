@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
           child: RichText(
             text: TextSpan(
               text: 'Xin chào ',
-              style: TextStyle(fontSize: 18, color: Colors.black),
+              style: const TextStyle(fontSize: 18, color: Colors.black),
               children: <TextSpan>[
                 TextSpan(
                   text: 'Flutter',
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,
                     decoration: TextDecoration.underline,
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                   // Nếu là true, văn bản sẽ được đánh vần ra từng ký tự bởi trình đọc màn hình.
                   spellOut: false,
                 ),
-                TextSpan(text: ' Developer!'),
+                const TextSpan(text: ' Developer!'),
               ],
             ),
           ),

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
@@ -15,10 +17,12 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: ListView.builder(
         itemCount: 30,
         itemBuilder: (context, index) => ListTile(title: Text('Item $index')),
@@ -32,16 +36,21 @@ class DemoText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: CustomAppBar(), body: Center(child: Text('back')));
+    return const Scaffold(
+      appBar: CustomAppBar(),
+      body: Center(child: Text('back')),
+    );
   }
 }
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text("Home Home"),
-      leading: IconButton(icon: Icon(Icons.person), onPressed: () {}),
+      title: const Text('Home Home'),
+      leading: IconButton(icon: const Icon(Icons.person), onPressed: () {}),
 
       // tự động hiện nut back thì navigator
       // nếu cấu hình leading thì automaticallyImplyLeading không tác dụng
@@ -50,16 +59,16 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       // Danh sách các widget bên phải (ví dụ: nút search, profile)
       actions: [
         IconButton(
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DemoText()),
+              MaterialPageRoute(builder: (context) => const DemoText()),
             );
           },
         ),
-        IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
-        IconButton(icon: Icon(Icons.ac_unit), onPressed: () {}),
+        IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
+        IconButton(icon: const Icon(Icons.ac_unit), onPressed: () {}),
       ],
       backgroundColor: Colors.grey,
 
@@ -81,7 +90,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       systemOverlayStyle: SystemUiOverlayStyle.dark,
 
       //
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(90)),
       ),
 
@@ -90,8 +99,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
 
       // Thêm widget phía sau nền AppBar
       flexibleSpace: Container(
-        margin: EdgeInsets.all(10),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.all(10),
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Colors.deepPurple, Colors.purpleAccent],
             begin: Alignment.topLeft,
@@ -101,7 +110,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
 
       // Thêm widget phía dưới AppBar
-      bottom: PreferredSize(
+      bottom: const PreferredSize(
         preferredSize: Size.fromHeight(56),
         child: Text('Phần dưới AppBar', style: TextStyle(color: Colors.black)),
       ),
@@ -120,23 +129,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       foregroundColor: Colors.red,
 
       // tùy chỉnh giao diện widget leading
-      iconTheme: IconThemeData(color: Colors.yellow),
+      iconTheme: const IconThemeData(color: Colors.yellow),
 
       // tùy chỉnh giao diện của các widget actions
       actionsIconTheme: const IconThemeData(color: Colors.blue),
 
       // tùy chỉnh giao diện của title
-      titleTextStyle: TextStyle(
+      titleTextStyle: const TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
         fontSize: 10,
       ),
 
       // padding tất cả action
-      actionsPadding: EdgeInsets.symmetric(horizontal: 100),
+      actionsPadding: const EdgeInsets.symmetric(horizontal: 100),
     );
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

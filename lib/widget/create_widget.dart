@@ -39,14 +39,16 @@ class PaddedText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: const Text('Hello, World!'),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
+      child: Text('Hello, World!'),
     );
   }
 }
 
 class CounterWidget extends StatefulWidget {
+  const CounterWidget({super.key});
+
   @override
   State<CounterWidget> createState() => _CounterWidgetState();
 }

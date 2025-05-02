@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: Container(
           // Khoảng cách bên trong Container
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           //Khoảng cách bên ngoài Container
-          margin: EdgeInsets.fromLTRB(20, 50, 20, 20),
+          margin: const EdgeInsets.fromLTRB(20, 50, 20, 20),
           width: 100,
           height: 300,
           color: Colors.blue,
-          child: Text('Hello World'),
+          child: const Text('Hello World'),
         ),
       ),
     );

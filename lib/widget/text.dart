@@ -9,9 +9,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        body: const Padding(
+        body: Padding(
           padding: EdgeInsets.all(16.0),
           child: Center(child: DemoText()),
         ),
@@ -25,7 +25,7 @@ class DemoText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return const Text(
       'Flutter Text Widget Demo: Đây là một đoạn văn bản khá dài để kiểm tra '
       'các thuộc tính như maxLines, overflow, textAlign và nhiều hơn nữa.'
       'các thuộc tính như maxLines, overflow, textAlign và nhiều hơn nữa.',

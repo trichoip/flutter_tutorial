@@ -1,9 +1,11 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
           itemBuilder: (context, index) => ListTile(title: Text('Item $index')),
         ),
         appBar: AppBar(
-          title: Text('Scaffold Example'),
+          title: const Text('Scaffold Example'),
           // forceMaterialTransparency: true,
         ),
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             print('Nút hành động nổi được nhấn!');
           },
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
         ),
 
         // Vị trí của FloatingActionButton
@@ -35,13 +37,13 @@ class MyApp extends StatelessWidget {
             onPressed: () {
               print('Nút lưu đã được nhấn');
             },
-            child: Text('persistentFooterButtons'),
+            child: const Text('persistentFooterButtons'),
           ),
           ElevatedButton(
             onPressed: () {
               print('Nút lưu đã được nhấn');
             },
-            child: Text('persistentFooterButtons'),
+            child: const Text('persistentFooterButtons'),
           ),
         ],
 
@@ -51,7 +53,7 @@ class MyApp extends StatelessWidget {
         // có thể truyền vào widget tùy ý, nên dùng widget Drawer
         drawer: Drawer(
           child: ListView(
-            children: <Widget>[
+            children: const <Widget>[
               DrawerHeader(child: Text('Drawer')),
               ListTile(title: Text('Item 1')),
               ListTile(title: Text('Item 2')),
@@ -60,7 +62,7 @@ class MyApp extends StatelessWidget {
         ),
 
         // có thể truyền vào widget tùy ý, nên dùng widget Drawer
-        endDrawer: Drawer(child: Center(child: Text('End Drawer'))),
+        endDrawer: const Drawer(child: Center(child: Text('End Drawer'))),
 
         // callback khi mở và đóng drawer
         onDrawerChanged: (isOpened) => print('Drawer trái mở: $isOpened'),
@@ -91,7 +93,7 @@ class MyApp extends StatelessWidget {
         bottomSheet: Container(
           color: Colors.green[100],
           height: 30,
-          child: Center(child: Text("Đây là bottomSheet")),
+          child: const Center(child: Text('Đây là bottomSheet')),
         ),
 
         backgroundColor: Colors.grey,

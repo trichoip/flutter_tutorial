@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
                   flex: 1,
                   child: Image(
                     image: NetworkImage('https://picsum.photos/200/300'),
+                    fit: BoxFit.fill,
                     width: 300,
                     height: 300,
                   ),
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
                   flex: 3,
                   child: Image(
                     image: NetworkImage('https://picsum.photos/200/300'),
+                    fit: BoxFit.fill,
                     width: 300,
                     height: 300,
                   ),
@@ -35,6 +37,7 @@ class MyApp extends StatelessWidget {
                   flex: 2,
                   child: Image(
                     image: NetworkImage('https://picsum.photos/200/300'),
+                    fit: BoxFit.fill,
                     width: 300,
                     height: 300,
                   ),
@@ -46,18 +49,21 @@ class MyApp extends StatelessWidget {
               children: [
                 Image(
                   image: NetworkImage('https://picsum.photos/200/300'),
+                  fit: BoxFit.fill,
                   width: 300,
                   height: 300,
                 ),
 
                 Image(
                   image: NetworkImage('https://picsum.photos/200/300'),
+                  fit: BoxFit.fill,
                   width: 300,
                   height: 300,
                 ),
                 Image(
                   image: NetworkImage('https://picsum.photos/200/300'),
-                  width: 300,
+                  fit: BoxFit.fill,
+                  width: 500,
                   height: 300,
                 ),
               ],
